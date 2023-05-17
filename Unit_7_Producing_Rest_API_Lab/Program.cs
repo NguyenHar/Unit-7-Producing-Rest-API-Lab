@@ -1,3 +1,5 @@
+using Unit_7_Producing_Rest_API_Lab.Models;
+
 namespace Unit_7_Producing_Rest_API_Lab
 {
     public class Program
@@ -5,6 +7,7 @@ namespace Unit_7_Producing_Rest_API_Lab
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<NorthwndContext>();
 
             // Add services to the container.
 
